@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Summarizer</title>
+
+  <!-- Add Google Font Import -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Ensure the body and html take full height */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #121212; /* Black background */
+      font-family: 'Roboto', sans-serif; /* Modern font */
+      color: #E0E0E0; /* Light grey text for readability */
+    }
+
+    /* Main content container styling */
+    .container {
+      width: 90%;
+      max-width: 800px;
+      background-color: #1f1f1f; /* Dark background for content */
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      margin-top: 100px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Soft shadow around content */
+    }
+
+    /* Title and description styling */
+    h1 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    /* Flexbox layout for input-group to align items horizontally */
+    .input-group {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    /* Input field and select box styling */
+    input[type="text"], select {
+      width: 200px;
+      padding: 10px;
+      border: 1px solid #555;
+      border-radius: 5px;
+      font-size: 16px;
+      background-color: #333;
+      color: white;
+    }
+
+    /* Button styling */
+    button {
+      width: auto;
+      padding: 10px 20px;
+      background-color: #FF5722;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Button hover effect */
+    button:hover {
+      background-color: #181616;
+    }
+
+    /* Summary section styling */
+    #summary {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #333;
+      border-radius: 5px;
+      font-size: 16px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+  
+</head>
+<body>
+
+  <!-- Home Page -->
+  <div id="home-page" class="container">
+    <h1>Advanced YouTube Video Summarizer</h1>
+    <p>This tool creates comprehensive summaries of YouTube videos using advanced AI technology. It works with both videos that have transcripts and those that don't!</p>
+
+    <div class="input-group">
+      <input type="text" id="videoUrl" placeholder="🔗Enter YouTube video URL">
+      <select id="language">
+        <option value="select language">🌍Language</option>
+        <option value="English">English</option>
+        <!-- <option value="Deutsch">Deutsch</option>
+        <option value="Español">Español</option>
+        <option value="Français">Français</option>
+        <option value="Italiano">Italiano</option>
+        <option value="Nederlands">Nederlands</option>
+        <option value="Polski">Polski</option>
+        <option value="Português">Português</option>
+        <option value="日本語">日本語</option> -->
+      </select>
+    </div>
+
+    <br>
+
+    <div class="input-group">
+      <button id="generateButton">Generate Summary</button>
+    </div>
+
+    <div id="summary"></div>
+  </div>
+
+  <script src="static/script.js"></script>
+</body>
+</html>
